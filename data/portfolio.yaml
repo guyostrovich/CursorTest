@@ -1,0 +1,97 @@
+# The Acme MedTech product portfolio. Acme MedTech is a fictional company;
+# the products are inspired by real device families but are not real products.
+#
+# product_codes are FDA three-letter product codes (for example DXY).
+# They were chosen by looking up device-type names in the openFDA classification
+# database. This is a training portfolio, so the choices are best-effort: a real
+# company takes its codes from its own FDA clearance or approval letters.
+# The first code(s) of each product are its own device type; the rest are
+# closely related types worth watching (leads, programmers, companion software).
+
+products:
+  - id: pulse-dr
+    name: Acme Pulse DR
+    category: Cardiac rhythm management
+    intended_use: Dual-chamber implantable pacemaker for patients with symptomatic bradycardia.
+    fda_pathway: PMA
+    markets: [US, EU]
+    has_software: true
+    uses_ai: false
+    tags: [implantable, cardiac, software, connected, cybersecurity]
+    product_codes:
+      - DXY  # Implantable Pacemaker Pulse-Generator
+      - LWP  # Implantable Pulse Generator, Pacemaker (Non-CRT)
+      - DTB  # Permanent Pacemaker Electrode (leads)
+      - KRG  # Programmer, Pacemaker
+      - OSR  # Pacemaker/ICD/CRT Non-Implanted Components
+
+  - id: guardian-icd
+    name: Acme Guardian ICD
+    category: Cardiac rhythm management
+    intended_use: Implantable cardioverter defibrillator for patients at risk of life-threatening ventricular arrhythmias.
+    fda_pathway: PMA
+    markets: [US, EU]
+    has_software: true
+    uses_ai: false
+    tags: [implantable, cardiac, software, connected, cybersecurity]
+    product_codes:
+      - LWS  # Implantable Cardioverter Defibrillator (Non-CRT)
+      - NIK  # Defibrillator, Automatic Implantable Cardioverter, With CRT (CRT-D)
+      - NVY  # Permanent Defibrillator Electrodes (leads)
+      - OSR  # Pacemaker/ICD/CRT Non-Implanted Components
+
+  - id: arcflow-ablation
+    name: Acme ArcFlow Ablation Catheter
+    category: Electrophysiology
+    intended_use: Single-use irrigated radiofrequency catheter for cardiac tissue ablation in the treatment of arrhythmias.
+    fda_pathway: 510k
+    markets: [US, EU]
+    has_software: false
+    uses_ai: false
+    tags: [cardiac, catheter, single-use, sterile, clinical-evaluation]
+    # Note: in the real FDA database these are class 3 (PMA) device types, while this
+    # fictional product is listed as 510(k). Kept as the closest device types.
+    product_codes:
+      - OAE  # Catheter, Percutaneous, Cardiac Ablation, For Treatment Of Atrial Fibrillation
+      - OAD  # Catheter, Percutaneous, Cardiac Ablation, For Treatment Of Atrial Flutter
+      - LPB  # Cardiac Ablation Percutaneous Catheter
+
+  - id: orbit-surgical
+    name: Acme Orbit Surgical System
+    category: Robotic surgery
+    intended_use: Robot-assisted system for minimally invasive soft-tissue surgery under surgeon control.
+    fda_pathway: 510k
+    markets: [US]
+    has_software: true
+    uses_ai: true
+    tags: [surgical, robotics, software, ai, cybersecurity, capital-equipment]
+    product_codes:
+      - NAY  # System, Surgical, Computer Controlled Instrument (class 2, 510(k))
+
+  - id: spineguide-nav
+    name: Acme SpineGuide Navigation
+    category: Surgical navigation
+    intended_use: Image-guided navigation system to assist placement of spinal implants during surgery.
+    fda_pathway: 510k
+    markets: [US, EU]
+    has_software: true
+    uses_ai: true
+    tags: [surgical, navigation, software, ai, imaging, capital-equipment]
+    product_codes:
+      - OLO  # Orthopedic Stereotaxic Instrument (class 2, 510(k))
+      - HAW  # Neurological Stereotaxic Instrument (class 2, 510(k))
+
+  - id: heartlink-app
+    name: Acme HeartLink Remote Monitoring
+    category: Digital health
+    intended_use: Mobile application that collects data from Acme implantable cardiac devices and flags trends for clinician review.
+    fda_pathway: De Novo
+    markets: [US, EU]
+    has_software: true
+    uses_ai: true
+    tags: [samd, software, ai, connected, cybersecurity, cardiac, remote-monitoring]
+    # Lowest confidence: a De Novo product would get its own new code in reality.
+    # These are the closest existing cardiac data and rhythm software types.
+    product_codes:
+      - DSI  # Detector And Alarm, Arrhythmia
+      - DPS  # Electrocardiograph (the type Medtronic Paceart is filed under)
