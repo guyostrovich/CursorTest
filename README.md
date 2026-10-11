@@ -42,7 +42,7 @@ python -m venv .venv
 
 If PowerShell refuses to run the activation script, run this once and try again:
 
-```powershell
+```powershelljgkjk
 Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 ```
 
