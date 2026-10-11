@@ -26,7 +26,7 @@ so nothing you install here affects the rest of your computer.
 
 Open a terminal **in the project folder** (the one containing this README), then:
 
-**macOS / Linux**
+**macOS / Linux**.
 
 ```bash
 python3 -m venv .venv
